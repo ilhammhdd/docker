@@ -1,6 +1,7 @@
 # Placeholder for the specified arch that gets parsed in the publish-experimental.sh script.
 FROM arm32v7/alpine:latest
 
+RUN apk update && apk upgrade
 RUN apk add --no-cache git openssh-client curl unzip bash ttf-dejavu coreutils dpkg gnupg tar openjdk8 && rm -rf /tmp/*.apk /var/cache/apk/*
 
 ARG user=jenkins
